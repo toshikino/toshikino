@@ -1,4 +1,73 @@
-h1 {
-font-size: 30px;
+a {
+  color: #000;
+  text-decoration: none;
+}
 
+.header {
+height: 80px;
+}
+
+
+.logo-image {
+  float: left;
+  padding: 0 30px;
+
+}
+
+.header-list {
+
+  float: right;
+  
+}
+
+.item {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0 30px;
+}
+
+.topic {
+  margin: 15px;
+}
+
+.backpaper-mvimg {
+  height: 660px;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-image: url(img/bg.png);
+}
+.mv-img {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  right:0% ;
+  float: right;
+}
+
+.mv-title {
+  position: relative;
+  left: 10%;
+  top: 170px;
+}
+
+.mv-subtitle {
+  position: relative;
+  left: 10%;
+  top: 170px;
+}
+
+.store-icon {
+  top: 330px;
+}
+
+.store-items {
+  position: absolute;
+  list-style: none;
+}
+
+.store-topic {
+  float: left;
+  top: 330px;
+ 
 }
