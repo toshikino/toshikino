@@ -1,0 +1,70 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "",
+  "author": "nitta <nitta@impv.co.jp>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rimraf build && npm-run-all -p build:* && npm run autoprefixer && npm-run-all -p watch:* eslint server",
+    "build": "rimraf build && npm-run-all -p build:* && npm run autoprefixer",
+    "build:html": "nunjucks '**/*.html' -p ./src/html -o ./build",
+    "build:scss": "sass ./src/scss:./build/assets/css",
+    "build:js": "browserify ./src/babel/index.js -o ./build/assets/js/bandle.js",
+    "autoprefixer": "postcss ./build/assets/css/**/*.css -c ./postcss.config.js --replace",
+    "build:images": "imagemin ./src/images/* -o ./build/assets/images/",
+    "build:static": "cp -p -r ./src/static/ ./build",
+    "watch:html": "nunjucks '**/*.html' -w -p ./src/html -o ./build",
+    "watch:scss": "sass --watch ./src/scss:./build/assets/css",
+    "watch:css": "watch \"npm run autoprefixer\" ./build/assets/css",
+    "watch:js": "watchify ./src/babel/index.js -v -d -o ./build/assets/js/bandle.js",
+    "watch:images": "onchange ./src/images -e '**/*.DS_Store' -- npm run build:images",
+    "eslint": "eslint './src/babel/*.js'",
+    "server": "http-server ./build"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "usage",
+          "corejs": 3
+        }
+      ]
+    ]
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "browserslist": [
+    "last 2 version",
+    "ie 10"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "autoprefixer": "^10.2.5",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "core-js": "3",
+    "cssnano": "^4.1.10",
+    "dart-sass": "^1.25.0",
+    "eslint": "^7.21.0",
+    "http-server": "^0.12.3",
+    "imagemin": "^7.0.1",
+    "imagemin-cli": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "nunjucks-cli": "^1.0.0",
+    "onchange": "^7.1.0",
+    "postcss": "^8.2.7",
+    "postcss-cli": "^8.3.1",
+    "postcss-logical": "^4.0.2",
+    "sass": "^1.32.8",
+    "watch": "^1.0.2",
+    "watchify": "^4.0.0"
+  },
+  "dependencies": {}
+}

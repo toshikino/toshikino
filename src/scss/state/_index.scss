@@ -1,0 +1,11 @@
+// レイアウトやモジュールの特定の状態におけるスタイルを定義します
+
+.is-hidden {
+  display: none;
+}
+
+.header {
+  &.is-active {
+    // .headerのactive状態のスタイルを追加できます。
+  }
+}

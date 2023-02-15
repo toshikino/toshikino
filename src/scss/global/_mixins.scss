@@ -1,0 +1,23 @@
+@use './variable' as var;
+
+///メディアクエリでスタイルを定義するためのmixin
+/// @param $break-point-* variablesのbreakpointsで定義した閾値
+@mixin media ($media-size) {
+  @if $media-size == lg {
+    @media screen and (min-width: var.$break-point-lg) {
+      @content;
+    }
+  } @else if $media-size == md {
+    @media screen and (min-width: var.$break-point-md) {
+      @content;
+    }
+  } @else if $media-size == sm {
+    @media screen and (max-width: var.$break-point-sm) {
+      @content;
+    }
+  } @else if $media-size == landscape {
+    @media only screen and (orientation: landscape) {
+      @content;
+    }
+  }
+}

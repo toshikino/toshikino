@@ -1,0 +1,25 @@
+:root {
+  // Typography
+  --font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Helvetica ,"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  --font-size-base: 62.5%;
+  --line-height-base: 180%;
+
+  // Colors
+  --color-primary: #222;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-bg: #EEEFF1;
+  --color-text: #222;
+  --color-link: #235284;
+  --color-border: #999;
+  --color-disabled: #bbb;
+  --color-alert: #D0464A;
+  --color-warning: #FFC453;
+  --color-success: #008060;
+}
+
+// Mediaquery
+// ------------------------------------
+$break-point-sm: 750px;
+$break-point-md: 751px;
+$break-point-lg: 1440px;

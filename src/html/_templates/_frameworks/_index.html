@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% if ( metadata.url === '' ) %}
+<head prefix="og:  fb:  website: ">
+{% else %}
+<head prefix="og:  fb:  article: ">
+{% endif %}
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+  <title>Template</title>
+  <meta name="description" content="{{ metadata.description }}">
+  <meta property="og:title" content="{{ metadata.title }}OMOPJ">
+  {% if ( metadata.url === '' ) %}
+  <meta property="og:type" content="website"/>
+  {% else %}
+  <meta property="og:type" content="article"/>
+  {% endif %}
+  <meta property="og:description" content="{{ metadata.description }}">
+  <meta property="og:url" content="{{ metadata.url }}">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="{{ metadata.title }} SiteName">
+  <link rel="icon" href="/assets/images/favicon.svg">
+  <link rel="icon alternate" href="/assets/images/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  {% block css %}{% endblock %}
+  <script> </script> <!-- Chromeのページロード時のtransition動作バグ対策 -->
+</head>
+<body>
+  <div id="wrap">
+    {% include "_templates/_layouts/_header.html" %}
+
+    <main class="contents">
+      {% block body %}{% endblock %}
+    </main>
+
+    {% include "_templates/_layouts/_footer.html" %}
+  </div>
+  {% include "_templates/_foundation/_js.html" %}
+  {% block js %}{% endblock %}
+</body>
+</html>

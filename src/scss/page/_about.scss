@@ -1,0 +1,7 @@
+@use '../global/index' as global;
+
+// 各ページのカスタマイズするCSSを記述します。
+.about {
+  background: var(--color-primary);
+  color: var(--color-white);
+}

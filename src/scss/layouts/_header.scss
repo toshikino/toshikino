@@ -1,0 +1,13 @@
+@use '../global/index' as global;
+
+
+.header {
+  background-color: var(--color-bg);
+  margin-block-start: 30px;
+  margin-block-end: 30px;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+  @include global.media(md) {
+    max-width: 1440px;
+  }
+}
