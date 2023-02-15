@@ -1,0 +1,27 @@
+// base
+// ------------------------------------
+@import 'global/index';
+@import 'global/base';
+
+// layout
+// ------------------------------------
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// module
+// ------------------------------------
+@import 'module/button';
+
+// page
+// ------------------------------------
+@import 'page/about';
+
+// state
+// ------------------------------------
+@import 'state/index';
+
+p {
+  font-weight: 800;
+  color:#fff
+  ;
+}
