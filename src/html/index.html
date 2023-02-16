@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<head prefix="og:  fb:  website: ">
+{% extends "_templates/_frameworks/_index.html" %}
 
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
-  <title>Template</title>
-  <meta name="description" content="{{ metadata.description }}">
-  <meta property="og:title" content="{{ metadata.title }}OMOPJ">
+{# meta #}
+{% set metadata = {
+  'description': '',
+  'title': '',
+  'url': ''
+} %}
 
-  <meta property="og:description" content="{{ metadata.description }}">
-  <meta property="og:url" content="{{ metadata.url }}">
-  <meta property="og:image" content="">
-  <meta property="og:site_name" content="{{ metadata.title }} SiteName">
-  <link rel="stylesheet" href="/assets/css/style.css">
+{% block css %}
+{% endblock %}
 
-  <script> </script> <!-- Chromeのページロード時のtransition動作バグ対策 -->
-</head>
-<body>
-  <div id="wrap">
-   <p class="test">hello world</p>
-   <p>aaaa</p>
-</body>
-</html>
+{% block body %}
+  contents
+  {% include "_templates/_icons/_test.html" %}
+
+  <picture>
+    <source media="(min-width:641px)" srcset="../images/kv_pc.jpg">
+    <source media="(max-width:640px)" srcset="../images/kv_sp.jpg">
+    <img src="../images/kv.jpg" alt="image">
+  </picture>
+
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}

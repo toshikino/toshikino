@@ -2162,9 +2162,8 @@ th {
   display: none;
 }
 
-.test {
-  font-weight: 800;
-  color: #fff;
+p {
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

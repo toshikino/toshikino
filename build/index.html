@@ -1,22 +1,46 @@
 <!DOCTYPE html>
+<html lang="ja">
 <head prefix="og:  fb:  website: ">
-
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
   <title>Template</title>
   <meta name="description" content="">
   <meta property="og:title" content="OMOPJ">
-
+  <meta property="og:type" content="website"/>
   <meta property="og:description" content="">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
   <meta property="og:site_name" content=" SiteName">
+  <link rel="icon" href="/assets/images/favicon.svg">
+  <link rel="icon alternate" href="/assets/images/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="/assets/css/style.css">
-
   <script> </script> <!-- Chromeのページロード時のtransition動作バグ対策 -->
 </head>
 <body>
   <div id="wrap">
-   <p class="test">hello world</p>
-   <a href="#">aaaa</a>
-</body>
+<header class="header">
+  header
+</header>
+    <main class="contents">
+  contents
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 3.29289C7.68342 2.90237 8.31658 2.90237 8.70711 3.29289L17.4142 12L8.70711 20.7071C8.31658 21.0976 7.68342 21.0976 7.29289 20.7071C6.90237 20.3166 6.90237 19.6834 7.29289 19.2929L14.5858 12L7.29289 4.70711C6.90237 4.31658 6.90237 3.68342 7.29289 3.29289Z" fill="#333333"/>
+  </svg>
+  
+  <picture>
+    <source media="(min-width:641px)" srcset="./images/kv_pc.jpg">
+    <source media="(max-width:640px)" srcset="./images/kv_sp.jpg">
+    <img src="src/images/kv.jpg" alt="image">
+  </picture>
+
+
+    </main>
+
+<footer class="footer">
+  <div class="contents__footer">
+    footer
+  </div>
+  <small class="footer__copy">copy</small>
+</footer>  </div>
+<script src="/assets/js/bandle.js"></script></body>
 </html>
