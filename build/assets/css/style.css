@@ -2211,7 +2211,7 @@ a {
 }
 
 .intro_bg {
-  background: url(../assets/images/bg_pattern.jpg) repeat;
+  background: url("./assets/images/bg_pattern.jpg") repeat;
   content: "";
 }
 
@@ -2223,6 +2223,7 @@ a {
 
 .intro {
   padding-top: 8%;
+  padding-left: 64px;
   line-height: 32px;
 }
 .intro__img {
@@ -2305,6 +2306,8 @@ a {
   border-radius: 25px;
   text-align: center;
   margin: auto;
+  min-height: 480px;
+  width: 380px;
 }
 .step__appli__browser__ttl {
   font-weight: bold;
@@ -2634,6 +2637,7 @@ a {
 .l-make {
   max-width: 925px;
   padding-top: 133px;
+  padding-bottom: 148px;
   margin: auto;
 }
 
@@ -2641,8 +2645,38 @@ a {
   margin-bottom: 20px;
   display: flex;
 }
+.make__fig {
+  padding-right: 64px;
+}
 .make__figimg {
   display: block;
+}
+.make__content__ttl {
+  font-size: 35px;
+  line-height: 63px;
+  font-weight: bold;
+}
+.make__content__desc {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.btn__black {
+  height: 80px;
+  margin: auto;
+  width: 600px;
+  background-color: #000;
+  border-radius: 100px;
+  display: block;
+  margin-top: 80px;
+  margin-bottom: 64px;
+}
+.btn__black a {
+  text-decoration: none;
+  font-size: 32px;
+  color: #ffffff;
 }
 
 .l-campaign {
@@ -2692,7 +2726,7 @@ a {
 }
 
 .l-att {
-  background-color: #F7F7FB;
+  background-color: #f7f7fb;
   font-family: "notosans";
   padding-top: 90px;
 }
@@ -2708,12 +2742,12 @@ a {
   padding: 80px;
   background-color: #fff;
 }
-alin .att__ttl {
+.att__ttl {
   text-align: center;
   font-size: 28px;
   font-weight: bold;
 }
-alin .att__ttl__desc {
+.att__ttl__desc {
   text-align: center;
   font-weight: bold;
   padding-bottom: 64px;
@@ -2815,6 +2849,7 @@ alin .att__ttl__desc {
 }
 
 /*========= レイアウトのためのCSS ===============*/
+h2,
 ul {
   margin: 0;
   padding: 0;

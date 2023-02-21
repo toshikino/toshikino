@@ -1,33 +1,10 @@
-// base
-// ------------------------------------
-@import 'global/index';
-@import 'global/base';
-
-// layout
-// ------------------------------------
-@import 'layouts/header';
-@import 'layouts/footer';
-
-// module
-// ------------------------------------
-@import 'module/button';
-
-// page
-// ------------------------------------
-@import 'page/about';
-@import url('https://fonts.googleapis.com/css2?family=Mirza&family=Roboto:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
-
-// state
-// ------------------------------------
-@import 'state/index';
-
 // style.scss
 
+@charset "UTF-8";
 
-// @use "foundation";
+@use "foundation";
 
-// @use "utility";
+@use "utility";
 
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
@@ -37,13 +14,13 @@
 
 // @use "modules";
 
-.sp-only　 {
+.pc-only {
   @media screen and (max-width: 768px) {
     display: none;
   }
 }
 
-.pc-only　 {
+.sp-only {
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -55,6 +32,7 @@ img {
   color: #292023;
   font-family: "Roboto", sans-serif;
   line-height: 160%;
+  overflow: hidden;
 }
 
 a {
@@ -63,25 +41,59 @@ a {
 .btn {
   &__margin {
     text-align: center;
+    padding: 0 20px;
   }
   &__green {
     background-color: #2eb67d;
-    color: #ffffff;
     width: 580px;
     height: 100px;
     border-radius: 100px;
     margin-top: 40px;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-top: 0;
+      
+      }
+    
     a {
+      display: inline;
       text-decoration: none;
       font-size: 32px;
       color: #ffffff;
       font-weight: bold;
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+        margin: auto;
+        }
     }
   }
 }
+.btn__black {
+  height: 80px;
+  margin: auto;
+  width: 600px;
+  background-color: #000;
+  border-radius: 100px;
+  display:block;
+  margin-top: 80px;
+  margin-bottom: 64px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    }
+  a {
+    text-decoration: none;
+    font-size: 32px;
+    color: #ffffff;
+
+  }
+}
+.l-page  {
+  overflow: hidden;
+}
 
 .intro_bg {
-  background: url(../assets/images/bg_pattern.jpg) repeat;
+  background: url(../img/bg_pattern.jpg) repeat;
   content: "";
 }
 
@@ -89,6 +101,9 @@ a {
   max-width: 640px;
   text-align: center;
   margin: 0 auto;
+  @media screen and (max-width: 768px) {
+  padding: 50px 20px;
+  }
 }
 
 .intro {
@@ -106,6 +121,9 @@ a {
       top: 8%;
       bottom: 100px;
     }
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
   }
 }
 
@@ -113,8 +131,10 @@ a {
   background-color: #fcf0b2;
   padding-bottom: 57px;
   padding-top: 90px;
-  
   display: block;
+  @media screen and (max-width: 768px) {
+    padding: 50px 20px;
+    }
   &__outline {
     max-width: 1181px;
     margin: auto;
@@ -136,6 +156,10 @@ a {
       text-align: center;
       width: 80%;
       z-index: 1;
+      @media screen and (max-width: 768px) {
+        top:0;
+        width: 100%;
+        }
 
       img {
         // display: inline;
@@ -152,11 +176,17 @@ a {
   max-width: 980px;
   margin: 0 auto 201px;
   text-align: left;
+  @media screen and (max-width: 768px) {
+    margin: auto;
+    }
 }
 
 .step {
   color: #2eb67d;
   text-align: center;
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+    }
 
   &__title {
     img {
@@ -174,11 +204,20 @@ a {
     padding-bottom: 20px;
     margin: auto;
     font-weight: bold;
+    color: #2eb67d;
     border-bottom: #2eb67d 2px dashed;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding-top: 54px;
+      }
   }
   &__desc {
     font-size: 20px;
+    color: #2eb67d;
     line-height: 73px;
+    @media screen and (max-width: 768px) {
+      line-height:40px;
+      }
   }
 
   &__appli {
@@ -186,11 +225,20 @@ a {
     display: flex;
     max-width: 980px;
     gap: 40px;
+    @media screen and (max-width: 768px) {
+      padding: 50px 20px;
+      display: block;
+      padding-bottom: 30px;
+      
+      }
     &__browser {
       border: 6px solid #2eb67d;
       border-radius: 25px;
       text-align: center;
       margin: auto;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 30px;
+        }
       &__ttl {
         font-weight: bold;
         font-size: 38px;
@@ -205,10 +253,17 @@ a {
         font-size: 20px;
         text-align: left;
         padding: 35px 25px 40px 25px;
+        @media screen and (max-width: 768px) {
+          padding: 20px 0;
+          text-align: center;
+          }
       }
       &__img1 {
         padding: 0 52px 32px 22px;
         vertical-align: bottom;
+        @media screen and (max-width: 768px) {
+          padding: 10px 60px 18px;
+          }
       }
       &__img2 {
         padding: 0 25px 0 40px;
@@ -225,11 +280,18 @@ a {
         font-weight: bold;
         line-height: 38px;
         text-align: center;
+        @media screen and (max-width: 768px) {
+          padding: 50px 20px;
+          font-size: 18px;
+          }
       }
     }
   }
   &__margin {
     padding-top: 161px;
+    @media screen and (max-width: 768px) {
+      padding: 70px 20px 0;
+      }
   }
 
   &__subinsta {
@@ -245,6 +307,10 @@ a {
     position: relative;
     font-weight: bold;
     margin: auto;
+    @media screen and (max-width: 768px) {
+     width: 100%;
+     
+      }
     &:after {
       content: "";
       position: absolute;
@@ -261,6 +327,9 @@ a {
   }
   &__insta {
     max-width: 880px;
+    @media screen and (max-width: 768px) {
+      padding: 0 20px;
+      }
     &__ttl {
       color: #ff7998;
       text-align: center;
@@ -271,12 +340,21 @@ a {
       margin: auto;
       padding-bottom: 20px;
       border-bottom: #ff7998 2px dashed;
+      @media screen and (max-width: 768px) {
+        padding: 28px 20px;
+        width: 100%;
+        font-size: 18px;
+        }
     }
     &__desc {
       font-size: 20px;
       line-height: 73px;
       color: #ff7998;
       text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 28px;
+        }
     }
 
     &__outline {
@@ -285,6 +363,11 @@ a {
       gap: 80px;
       max-width: 880px;
       margin: auto;
+      @media screen and (max-width: 768px) {
+        display: block;
+        gap: 0;
+        
+        }
 
       &__att {
         font-weight: bold;
@@ -294,25 +377,39 @@ a {
         text-align: left;
         max-width: 880px;
         margin-bottom: 160px;
+        @media screen and (max-width: 768px) {
+          padding: 30px 20px 0;
+          margin: 0;
+          }
       }
     }
 
     &__group {
-      width: 400px;
+      max-width: 400px;
       border: 6px solid #ff7998;
       border-radius: 25px;
       padding-top: 24px;
       padding-bottom: 30px;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 30px;
+        }
+      
+
 
       &__ttl {
         font-weight: bold;
         font-size: 38px;
         color: #ff7998;
         text-align: center;
+        @media screen and (max-width: 768px) {
+          font-size: 23px;
+          }
         span {
           font-size: 58px;
           color: #ff7998;
-        }
+          @media screen and (max-width: 768px) {
+            font-size: 35px;
+            }        }
       }
       &__desc {
         font-weight: 900;
@@ -322,6 +419,9 @@ a {
       }
       &__btn {
         text-align: center;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          }
       }
     }
     &__img {
@@ -341,6 +441,11 @@ a {
       height: 48px;
       align-items: center;
       line-height: 48px;
+        @media screen and (max-width: 768px) {
+        width: 100%;
+        box-shadow: none;
+        
+        }
       a {
         vertical-align: middle;
         margin: auto;
@@ -352,9 +457,16 @@ a {
     }
   }
 }
+.margin__insta {
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+    }
+}
+
 .l-refer {
   max-width: 920px;
   margin: auto;
+  overflow: hidden;
 }
 .refer {
   &__sample {
@@ -368,6 +480,9 @@ a {
     padding-top: 42px;
     padding-bottom: 240px;
     justify-content: center;
+    @media screen and (max-width: 768px) {
+      padding: 0;
+      }
     &__math {
       width: 247px;
     }
@@ -375,6 +490,20 @@ a {
       width: 70px;
     }
   }
+}
+.deco {
+  font-size: 28px;
+  color: #fff;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    }
+}
+.num {
+  font-size: 22px;
+  color: #fff;
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    }
 }
 .prize {
   display: grid;
@@ -534,7 +663,7 @@ a {
 .l-make {
   max-width: 925px;
   padding-top: 133px;
-  
+  padding-bottom: 148px;
   margin: auto;
 }
 .make {
@@ -609,7 +738,7 @@ a {
   border: 1px #000 solid;
   padding: 80px;
   background-color: #fff;
-  alin
+  
   &__ttl {
     text-align: center;
     font-size: 28px;
@@ -633,6 +762,142 @@ a {
     padding-top: 48px;
   }
 }
+
+
+/* illust */
+// .illust-wrap{
+//   position: relative;
+//   &::before,
+//   &::after{
+//       position: absolute;
+//       content: "";
+//       display: block;
+//       width: 64px;
+//       height: 64px;
+
+//   &--intro{
+//       &::before{
+//           top: 140px;
+//           left: 0;
+//           background: url('./img/illust_heart.svg') no-repeat center;
+//           background-size: contain;
+//       }
+//       &::after{
+//           bottom: 140px;
+//           right: 0;
+//           background: url('./img/illust_leaf.svg') no-repeat center;
+//           background-size: contain;
+//       }
+//   }
+//   &--step-portal{
+//       &::before{
+//           top: 0;
+//           left: -80px;
+//           background: url('./img/illust_tree.svg') no-repeat center;
+//           background-size: contain;
+//           transform: scale(1.2);
+//       }
+//       &::after{
+//           bottom: 80px;
+//           right: -80px;
+//           background: url('./img/illust_bird.svg') no-repeat center;
+//           background-size: contain;
+//           transform: scale(1.2);
+//       }
+//   }
+//   &--step-insta{
+//       &::before{
+//           top: 0;
+//           left: -60px;
+//           background: url('./img/illust_star.svg') no-repeat center;
+//           background-size: contain;
+//           transform: scale(0.8);
+//       }
+//       &::after{
+//           display: none;
+//       }
+//   }
+//   &--post{
+//       &::before{
+//           top: 100px;
+//           right: 0;
+//           background: url('./img/illust_leaf.svg') no-repeat center;
+//           background-size: contain;
+//           transform: scale(1, -1);
+//       }
+//       &::after{
+//           bottom: 0px;
+//           left: 60px;
+//           background: url('./img/illust_leaf.svg') no-repeat center;
+//           background-size: contain;
+//           transform: rotate(170deg) scale(0.8);
+//       }
+//   }
+//   &--prize-portal1{
+//       &::before{
+//           top: -160px;
+//           left: -24px;
+//           background: url('./img/illust_star.svg') no-repeat center;
+//           background-size: contain;
+//           transform: scale(0.8);
+//       }
+//       &::after{
+//           top: 640px;
+//           right: -120px;
+//           background: url('./img/illust_triangle.svg') no-repeat center;
+//           background-size: contain;
+//           transform: scale(1.2);
+//       }
+//   }
+//   &--prize-portal2{
+//       &::before{
+//           top: -240px;
+//           left: -120px;
+//           background: url('./img/illust_tree.svg') no-repeat center;
+//           background-size: contain;
+//           transform: scale(1.2);
+//       }
+//       &::after{
+//           bottom: 160px;
+//           right: -100px;
+//           background: url('./img/illust_tree2.svg') no-repeat center;
+//           background-size: contain;
+//           transform: scale(1.2);
+//       }
+//   }
+//   &--prize-insta{
+//       &::before{
+//           top: 40px;
+//           left: -80px;
+//           background: url('./img/illust_heart.svg') no-repeat center;
+//           background-size: contain;
+//           transform: scale(-1, 1);
+//       }
+//       &::after{
+//           bottom: 20px;
+//           right: -120px;
+//           background: url('./img/illust_bird.svg') no-repeat center;
+//           background-size: contain;
+//           transform: scale(1.2);
+//       }
+//   }
+//   &--campaign{
+//       &::before{
+//           top: 100px;
+//           right: -80px;
+//           background: url('./img/illust_heart.svg') no-repeat center;
+//           background-size: contain;
+//       }
+//       &::after{
+//           bottom: 200px;
+//           left: -100px;
+//           background: url('./img/illust_leaf.svg') no-repeat center;
+//           background-size: contain;
+//           transform: rotate(180deg);
+//       }
+//   }
+// }
+
 
 
 /*スライド機能*/
@@ -712,28 +977,3 @@ a {
 }
 
 
-/*========= レイアウトのためのCSS ===============*/
-
-// body{
-//  background:#eee;
-// }
-
-h2,p {
-  //  text-align:left;
-  //  padding:20px;
-}
-
-ul{
- margin:0;
- padding: 0;
- list-style: none;
-}
-
-a{
- color: #333;
-}
-
-a:hover,
-a:active{
- text-decoration: none;
-}
