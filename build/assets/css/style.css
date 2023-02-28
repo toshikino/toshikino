@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   src: url("/fonts/NotoSansJP-Regular.woff") format("woff");
   font-family: "Noto Sans JP";
@@ -1733,432 +1732,6 @@ th {
   border-radius: 4px;
 }
 
-@font-face {
-  src: url("/fonts/NotoSansJP-Regular.woff") format("woff");
-  font-family: "Noto Sans JP";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  src: url("/fonts/NotoSansJP-Bold.woff") format("woff");
-  font-family: "Noto Sans JP";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-:root {
-  --font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Helvetica ,"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-  --font-size-base: 62.5%;
-  --line-height-base: 180%;
-  --color-primary: #222;
-  --color-black: #000;
-  --color-white: #fff;
-  --color-bg: #EEEFF1;
-  --color-text: #222;
-  --color-link: #235284;
-  --color-border: #999;
-  --color-disabled: #bbb;
-  --color-alert: #D0464A;
-  --color-warning: #FFC453;
-  --color-success: #008060;
-}
-
-/*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
-/* Reset box-model and set borders */
-/* ============================================ */
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  border-style: solid;
-  border-width: 0;
-}
-
-/* Document */
-/* ============================================ */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- * 3. Remove gray overlay on links for iOS.
- */
-html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-tap-highlight-color: transparent;
-  /* 3*/
-}
-
-/* Sections */
-/* ============================================ */
-/**
- * Remove the margin in all browsers.
- */
-body {
-  margin: 0;
-}
-
-/**
- * Render the `main` element consistently in IE.
- */
-main {
-  display: block;
-}
-
-/* Vertical rhythm */
-/* ============================================ */
-p,
-table,
-blockquote,
-address,
-pre,
-iframe,
-form,
-figure,
-dl {
-  margin: 0;
-}
-
-/* Headings */
-/* ============================================ */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-  margin: 0;
-}
-
-/* Lists (enumeration) */
-/* ============================================ */
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Lists (definition) */
-/* ============================================ */
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin-left: 0;
-}
-
-/* Grouping content */
-/* ============================================ */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
-  border-top-width: 1px;
-  margin: 0;
-  clear: both;
-  color: inherit;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: inherit;
-  /* 2 */
-}
-
-address {
-  font-style: inherit;
-}
-
-/* Text-level semantics */
-/* ============================================ */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a {
-  background-color: transparent;
-  text-decoration: none;
-  color: inherit;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  text-decoration: underline dotted;
-  /* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: inherit;
-  /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/* Replaced content */
-/* ============================================ */
-/**
- * Prevent vertical alignment issues.
- */
-svg,
-img,
-embed,
-object,
-iframe {
-  vertical-align: bottom;
-}
-
-/* Forms */
-/* ============================================ */
-/**
- * Reset form fields to make them styleable.
- * 1. Make form elements stylable across systems iOS especially.
- * 2. Inherit text-transform from parent.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  -webkit-appearance: none;
-  /* 1 */
-  appearance: none;
-  vertical-align: middle;
-  color: inherit;
-  font: inherit;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  text-align: inherit;
-  text-transform: inherit;
-  /* 2 */
-}
-
-/**
- * Correct cursors for clickable elements.
- */
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  cursor: pointer;
-}
-
-button:disabled,
-[type=button]:disabled,
-[type=reset]:disabled,
-[type=submit]:disabled {
-  cursor: default;
-}
-
-/**
- * Improve outlines for Firefox and unify style with input elements & buttons.
- */
-:-moz-focusring {
-  outline: auto;
-}
-
-select:disabled {
-  opacity: inherit;
-}
-
-/**
- * Remove padding
- */
-option {
-  padding: 0;
-}
-
-/**
- * Reset to invisible
- */
-fieldset {
-  margin: 0;
-  padding: 0;
-  min-width: 0;
-}
-
-legend {
-  padding: 0;
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea {
-  overflow: auto;
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * Correct the outline style in Safari.
- */
-[type=search] {
-  outline-offset: -2px;
-  /* 1 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Fix font inheritance.
- */
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-}
-
-/**
- * Fix appearance for Firefox
- */
-[type=number] {
-  -moz-appearance: textfield;
-}
-
-/**
- * Clickable labels
- */
-label[for] {
-  cursor: pointer;
-}
-
-/* Interactive */
-/* ============================================ */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details {
-  display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-summary {
-  display: list-item;
-}
-
-/*
- * Remove outline for editable content.
- */
-[contenteditable]:focus {
-  outline: auto;
-}
-
-/* Tables */
-/* ============================================ */
-/**
-1. Correct table border color inheritance in all Chrome and Safari.
-*/
-table {
-  border-color: inherit;
-  /* 1 */
-  border-collapse: collapse;
-}
-
-caption {
-  text-align: left;
-}
-
-td,
-th {
-  vertical-align: top;
-  padding: 0;
-}
-
-th {
-  text-align: left;
-  font-weight: bold;
-}
-
-.about {
-  background: var(--color-primary);
-  color: var(--color-white);
-}
-
 .is-hidden {
   display: none;
 }
@@ -2264,7 +1837,7 @@ a {
 }
 
 .intro_bg {
-  background: url(../img/bg_pattern.jpg) repeat;
+  background: url(../assets/images/bg_pattern.jpg) repeat;
   content: "";
 }
 
@@ -3277,12 +2850,12 @@ a {
 .illust__intro::before {
   transform: translate(-300px, 75px) scale(0.8);
   background-size: contain;
-  background: url(../img/illust_heart.svg) no-repeat center;
+  background: url(../assets/images/illust_heart.svg) no-repeat center;
 }
 .illust__intro::after {
   transform: translate(300px, 75px);
   background-size: contain;
-  background: url(../img/illust_leaf.svg) no-repeat center;
+  background: url(../assets/images/illust_leaf.svg) no-repeat center;
 }
 .illust__step::before, .illust__step::after {
   position: absolute;
@@ -3298,11 +2871,11 @@ a {
 .illust__step::before {
   transform: translate(-175px, -130px) scale(0.8);
   background-size: contain;
-  background: url(../img/illust_tree.svg) no-repeat center;
+  background: url(../assets/images/illust_tree.svg) no-repeat center;
 }
 .illust__step::after {
   transform: translate(900px, 100px) scale(0.8);
-  background: url(../img/illust_bird.svg) no-repeat center;
+  background: url(../assets/images/illust_bird.svg) no-repeat center;
 }
 .illust__insta::before, .illust__insta::after {
   position: absolute;
@@ -3318,7 +2891,7 @@ a {
 .illust__insta::before {
   transform: translate(-341px, 22px) scale(0.8);
   background-size: contain;
-  background: url(../img/illust_star.svg) no-repeat center;
+  background: url(../assets/images/illust_star.svg) no-repeat center;
 }
 .illust__refer::before, .illust__refer::after {
   position: absolute;
@@ -3334,12 +2907,12 @@ a {
 .illust__refer::before {
   transform: translate(-400px, 1100px) scale(0.8) rotate(170deg);
   background-size: contain;
-  background: url(../img/illust_leaf.svg) no-repeat center;
+  background: url(../assets/images/illust_leaf.svg) no-repeat center;
 }
 .illust__refer::after {
   transform: translate(450px, -130px) scale(1, -1);
   background-size: contain;
-  background: url(../img/illust_leaf.svg) no-repeat center;
+  background: url(../assets/images/illust_leaf.svg) no-repeat center;
 }
 .illust__step2::before, .illust__step2::after {
   position: absolute;
@@ -3355,12 +2928,12 @@ a {
 .illust__step2::before {
   transform: translate(-600px, 280px) scale(0.8);
   background-size: contain;
-  background: url(../img/illust_star.svg) no-repeat center;
+  background: url(../assets/images/illust_star.svg) no-repeat center;
 }
 .illust__step2::after {
   transform: translate(525px, 730px);
   background-size: contain;
-  background: url(../img/illust_triangle.svg) no-repeat center;
+  background: url(../assets/images/illust_triangle.svg) no-repeat center;
 }
 .illust__schleich::before, .illust__schleich::after {
   position: absolute;
@@ -3376,12 +2949,12 @@ a {
 .illust__schleich::before {
   transform: translate(-140px, -300px) scale(0.8);
   background-size: contain;
-  background: url(../img/illust_tree.svg) no-repeat center;
+  background: url(../assets/images/illust_tree.svg) no-repeat center;
 }
 .illust__schleich::after {
   transform: translate(1000px, 170px);
   background-size: contain;
-  background: url(../img/illust_tree2.svg) no-repeat center;
+  background: url(../assets/images/illust_tree2.svg) no-repeat center;
 }
 .illust__insta2::before, .illust__insta2::after {
   position: absolute;
@@ -3397,12 +2970,12 @@ a {
 .illust__insta2::before {
   transform: translate(-330px, -40px) scale(-0.8, 0.8);
   background-size: contain;
-  background: url(../img/illust_heart.svg) no-repeat center;
+  background: url(../assets/images/illust_heart.svg) no-repeat center;
 }
 .illust__insta2::after {
   transform: translate(310px, 570px);
   background-size: contain;
-  background: url(../img/illust_bird.svg) no-repeat center;
+  background: url(../assets/images/illust_bird.svg) no-repeat center;
 }
 .illust__campaign::before, .illust__campaign::after {
   position: absolute;
@@ -3418,102 +2991,28 @@ a {
 .illust__campaign::before {
   transform: translate(900px, -60px);
   background-size: contain;
-  background: url(../img/illust_heart.svg) no-repeat center;
+  background: url(../assets/images/illust_heart.svg) no-repeat center;
 }
 .illust__campaign::after {
   transform: translate(-136px, 832px) scale(-0.7, -0.7) rotate(30deg);
   background-size: contain;
-  background: url(../img/illust_leaf.svg) no-repeat center;
+  background: url(../assets/images/illust_leaf.svg) no-repeat center;
 }
 
-/*スライド機能*/
-.slider {
-  /*横幅94%で左右に余白を持たせて中央寄せ*/
-  width: 94%;
-  margin: 0 auto;
-}
-.slider__outline {
-  background-color: #ffffff;
-  border: #ffffff;
-  padding: 19px 28px 20px;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  margin-bottom: 30px;
-}
-
-.slider img {
-  width: 100%;
-  /*スライダー内の画像を横幅100%に*/
-  height: auto;
-}
-
-/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
-.slider .slick-slide {
-  margin: 0 10px;
-}
-
-/*矢印の設定*/
-/*戻る、次へ矢印の位置*/
-.slick-prev,
-.slick-next {
-  position: absolute;
-  /*絶対配置にする*/
-  top: 42%;
+.swiper-slide {
   cursor: pointer;
-  /*マウスカーソルを指マークに*/
-  outline: none;
-  /*クリックをしたら出てくる枠線を消す*/
-  border-top: 2px solid #666;
-  /*矢印の色*/
-  border-right: 2px solid #666;
-  /*矢印の色*/
-  height: 15px;
-  width: 15px;
 }
 
-.slick-prev {
-  /*戻る矢印の位置と形状*/
-  left: -1.5%;
-  transform: rotate(-135deg);
+.sample03 .swiper-button-prev,
+.sample03 .swiper-button-next {
+  display: none;
 }
 
-.slick-next {
-  /*次へ矢印の位置と形状*/
-  right: -1.5%;
-  transform: rotate(45deg);
-}
-
-/*ドットナビゲーションの設定*/
-.slick-dots {
-  text-align: center;
-  margin: 20px 0 0 0;
-}
-
-.slick-dots li {
-  display: inline-block;
-  margin: 0 5px;
-}
-
-.slick-dots button {
-  color: transparent;
-  outline: none;
-  width: 8px;
-  /*ドットボタンのサイズ*/
-  height: 8px;
-  /*ドットボタンのサイズ*/
-  display: block;
-  border-radius: 50%;
-  background: #ccc;
-  /*ドットボタンの色*/
-}
-
-.slick-dots .slick-active button {
-  background: #333;
-  /*ドットボタンの現在地表示の色*/
-}
-
-p {
-  padding: 0;
+@media (min-width: 768px) {
+  .sample03 .swiper-button-prev,
+.sample03 .swiper-button-next {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

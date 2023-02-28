@@ -1,25 +1,19 @@
-('.slider').slick({
-  autoplay: false,//自動的に動き出すか。初期値はfalse。
-  infinite: true,//スライドをループさせるかどうか。初期値はtrue。
-  slidesToShow: 3,//スライドを画面に3枚見せる
-  slidesToScroll: 3,//1回のスクロールで3枚の写真を移動して見せる
-  prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
-  nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
-  // dots: false,//下部ドットナビゲーションの表示
-  responsive: [
-    {
-    breakpoint: 769,//モニターの横幅が769px以下の見せ方
-    settings: {
-      slidesToShow: 2,//スライドを画面に2枚見せる
-      slidesToScroll: 2,//1回のスクロールで2枚の写真を移動して見せる
+window.addEventListener('DOMContentLoaded', function() {
+  var swiper03 = new Swiper('.sample03 .swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    loop: true,
+    slidesPerView: 3,
+    loopedSlides: 3,
+    centeredSlides : true,
+    slideToClickedSlide: true,
+    spaceBetween: 10,
+    breakpoints: {
+      543: {
+        slidesPerView: 2,
+      }
     }
-  },
-  {
-    breakpoint: 426,//モニターの横幅が426px以下の見せ方
-    settings: {
-      slidesToShow: 1,//スライドを画面に1枚見せる
-      slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
-    }
-  }
-]
-});
+  });
+}, false);

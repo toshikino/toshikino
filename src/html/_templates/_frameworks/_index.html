@@ -28,10 +28,7 @@
 <body>
   <div id="wrap">
     {% include "_templates/_layouts/_header.html" %}
-
-    <main class="contents">
-      {% block body %}{% endblock %}
-    </main>
+    {% include "_templates/_layouts/_main.html" %}
 
     {% include "_templates/_layouts/_footer.html" %}
   </div>
