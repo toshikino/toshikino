@@ -1279,6 +1279,7 @@ a {
 .row{
     display: -ms-grid;
     -ms-grid-columns: min-content;
+    max-width: 925px;
 }
 
 .autoplay-slider {
