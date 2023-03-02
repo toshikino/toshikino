@@ -18,7 +18,6 @@
     "watch:scss": "sass --watch ./src/scss:./build/assets/css",
     "watch:css": "watch \"npm run autoprefixer\" ./build/assets/css",
     "watch:js": "watchify ./src/babel/index.js -v -d -o ./build/assets/js/bandle.js",
-    "watch:images": "onchange ./src/images -e '**/*.DS_Store' -- npm run build:images",
     "eslint": "eslint './src/babel/*.js'",
     "server": "http-server ./build"
   },
